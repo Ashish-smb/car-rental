@@ -14,43 +14,13 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-<!-- topbar -->
-<div class="topbar bg-dark max-lg:hidden bg-black">
-    <div class="container mx-auto">
-        <div class="flex justify-between text-sm">
-            <div class="social-media-font flex items-center justify-end text-white gap-10">
-                <a href="#">
-                    <i class="fa-brands fa-facebook hover:text-cyan-200"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-whatsapp hover:text-cyan-200"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-youtube hover:text-cyan-200"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-x-twitter hover:text-cyan-200"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-instagram hover:text-cyan-200"></i>
-                </a>
-            </div>
-            <div class="contact-detail flex items-center text-white">
-                <a href="#" class="bg-red-600 px-5 py-3">Get Quote</a>
-                <a href="#" class="bg-slate-600 px-5 py-3">Any Help</a>
-                <a href="#" class="px-5 py-3">About Us</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- navbar -->
-<nav class="container mx-auto flex flex-col lg:flex-row justify-around lg:items-center relative" x-data="{ showSidebar: false }">
+<div class="px-14 flex flex-col lg:flex-row justify-around lg:items-center" x-data="{ showSidebar: false }">
     <!-- Logo and Toggle Button -->
     <div class="flex items-center justify-between w-full lg:w-auto relative">
         <a href="#" id="logo" class="flex items-center justify-between text-xl md:text-3xl font-extrabold text-primary">
-            <img src="assets/imgs/logo.png" alt="Shiva Furnitures Logo" class="">
-            
+            <img src="assets/imgs/car-logo.svg" alt="Shiva Furnitures Logo" class="">
         </a>
         <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar" aria-label="Toggle sidebar">
             <i class="fas fa-bars"></i>
@@ -58,14 +28,15 @@
     </div>
 
     <!-- Desktop Menu -->
-    <form action="index.html" class="max-xl:hidden">
-        <div class="border">
-            <i class="fa-solid fa-magnifying-glass px-3"></i>
-            <input type="search" class="w-[500px] p-3 outline-none">
-            <a href="#" class="px-6 py-3 bg-red-600 text-white hover:bg-red-500 rounded">search</a>
-        </div>
-
-    </form>
+    <div class="border rounded-full text-sm">
+        <select class="border-r p-3 rounded-l-full outline-none">
+            <option value="All">All</option>
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+        </select>
+        <i class="fa-solid fa-magnifying-glass px-2"></i>
+        <input type="search" class="w-[300px] outline-none rounded-full pr-3" placeholder="Search">
+    </div>
 
     <!-- Mobile Sidebar -->
     <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }" 
@@ -85,15 +56,60 @@
         </ul>
     </div>
 
-    <div class="text-red-600 text-lg flex justify-center items-center font-semibold gap-2 max-lg:hidden">
-        <a href="#"><i class="fa-solid fa-phone text-2xl"></i></a>
-        +91-9910705147
-        <div class="text-sm text-black">(For Support)</div>
+    <div class="text-red-600 text-sm flex justify-center items-center font-semibold gap-2 max-lg:hidden">
+        <a href="#">
+            <i class="fa-solid fa-user w-8 h-8 bg-orange-500 text-white flex justify-center items-center rounded-full hover:bg-white hover:text-red-600 hover:border-2 duration-500"></i>
+        </a>
+        <a href="#">
+            Login / Register
+        </a>
+    </div>
+</div>
+
+<!-- navbar -->
+<nav class="navbar bg-slate-100 py-2">
+    <div class="px-14">
+        <div class="flex justify-between">
+            <ul class="nav-links capitalize flex justify-start gap-6 font-semibold text-slate-500 text-sm">
+                <li class="flex items-center justify-between">
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">wellness</a>
+                    <!-- <i class="fa-solid fa-caret-down text-sm"></i> -->
+                </li>
+                <li class="flex items-center justify-between">
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">hair and skin</a>
+                    <!-- <i class="fa-solid fa-caret-down text-sm"></i> -->
+                </li>
+                <li class="flex items-center justify-between">
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">shop by concern</a>
+                    <!-- <i class="fa-solid fa-caret-down text-sm"></i> -->
+                </li>
+                <li class="flex items-center justify-between">
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">best sellers</a>
+                    <!-- <i class="fa-solid fa-caret-down text-sm"></i> -->
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">new launches</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">hair solutions</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">about us</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="hover:text-black duration-300">blogs</a>
+                </li>
+            </ul>
+            <a href="#" class="text-sm font-semibold text-slate-500 hover:text-black">
+                Select City
+            </a>
+
+        </div>
     </div>
 </nav>
 
 <!-- footer -->
-<footer class="footer bg-slate-100 mt-10 py-6">
+<footer class="px-14 footer bg-slate-100 mt-10 py-6">
     <div class="container mx-auto">
         <div class="grid grid-cols-2 lg:grid-cols-4">
             <div class="support-links capitalize">
@@ -172,7 +188,7 @@
     </div>
 </footer>
 <!-- footer bottom -->
-<div class="footer-bottom bg-slate-100 capitalize">
+<div class="px-14 footer-bottom bg-slate-100 capitalize">
     <div class="container mx-auto flex justify-between text-gray-500 border-t-2 py-3 max-lg:block">
         <span>
             copyright &copy; to shiftingbazar all right reserved

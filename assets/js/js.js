@@ -1,28 +1,46 @@
-const guide = $('.guide-carousel')
-$(".guide-carousel").owlCarousel({
-    items: 2,
-    margin:20,
+// recommed car carousel
+
+const recommed = $('.recommed-carousel');
+$('#recommed-prev').click(function () {
+    recommed.trigger('prev.owl.carousel');
+});
+$('#recommed-next').click(function() {
+    recommed.trigger('next.owl.carousel');
+});
+$('.recommed-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
     autoplay:true,
-    loop : true,
-    autoplayHoverPause: true,
-    dots:true
-});
-$('#product-prev').click(function () {
-    guide.trigger('prev.owl.carousel');
-});
-$('#product-next').click(function() {
-    guide.trigger('next.owl.carousel');
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
 });
 
-
-// search tab menu
-const btns = $('.hero-area ul li a');
-const tabs = $('.hero-area .menu-tab > div');
-btns.click(function() {
-    btns.removeClass('active');
-    $(this).addClass('active');
-    tabs.removeClass('active');
-    $($(this).data('tab')).addClass('active');
+// latest car carousel
+const latest = $('.latest-car-carousel');
+$('#latest-car-prev').click(function () {
+    latest.trigger('prev.owl.carousel');
+});
+$('#latest-car-next').click(function() {
+    latest.trigger('next.owl.carousel');
+});
+$('.latest-car-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
+    autoplay:true,
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
 });
 
 // menu-tab
@@ -35,38 +53,110 @@ btn.click(function() {
     $($(this).data('menu')).addClass('active');
     console.log( $(this).data('menu') );
 });
-// popup
-(function($) {
-    $.fn.showsidebar = function(sel) {
-        $(this).click(function() {
-            $(sel).addClass('show');
-        });
-        return this;
-    };
 
-    $.fn.hidesidebar = function(sel) {
-        $(this).click(function() {
-            $(sel).removeClass('show');
-        });
-        return this;
-    };
-
-    $.fn.showpopup = function(t) {
-        const sel = $(this);
-        setTimeout(function() {
-            sel.addClass('show');
-        }, t);
-    };
-})(jQuery);
-
-$(document).ready(function() {
-    $('#host').showsidebar('.popup');
-
-    $('#login').showsidebar('.popup');
-
-    $('.popup-close').click(function() {
-        $('.popup').removeClass('show');
-    });
-
-    $('.popup').showpopup(2000);
+// menu-tab carousel
+// suv carousel
+const suv = $('.suv-carousel');
+$('#suv-prev').click(function () {
+    suv.trigger('prev.owl.carousel');
+});
+$('#suv-next').click(function() {
+    suv.trigger('next.owl.carousel');
+});
+$('.suv-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
+    autoplay:true,
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
+});
+// hatchback
+const hatchback = $('.hatchback-carousel');
+$('#hatchback-prev').click(function () {
+    hatchback.trigger('prev.owl.carousel');
+});
+$('#hatchback-next').click(function() {
+    hatchback.trigger('next.owl.carousel');
+});
+$('.hatchback-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
+    autoplay:true,
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
+});
+// sedan
+const sedan = $('.sedan-carousel');
+$('#sedan-prev').click(function () {
+    sedan.trigger('prev.owl.carousel');
+});
+$('#sedan-next').click(function() {
+    sedan.trigger('next.owl.carousel');
+});
+$('.sedan-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
+    autoplay:true,
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
+});
+// muv
+const muv = $('.muv-carousel');
+$('#muv-prev').click(function () {
+    muv.trigger('prev.owl.carousel');
+});
+$('#muv-next').click(function() {
+    muv.trigger('next.owl.carousel');
+});
+$('.muv-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
+    autoplay:true,
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
+});
+// luxury
+const luxury = $('.luxury-carousel');
+$('#luxury-prev').click(function () {
+    luxury.trigger('prev.owl.carousel');
+});
+$('#luxury-next').click(function() {
+    luxury.trigger('next.owl.carousel');
+});
+$('.luxury-carousel').owlCarousel({
+    loop:true,
+    margin: 20,
+    autoplay:true,
+    responsive : {
+        0 : {
+            items:2,
+        },
+        768 : {
+            items:4,
+        }
+    }
 });
